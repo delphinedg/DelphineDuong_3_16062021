@@ -1,0 +1,50 @@
+.intro{
+    background-color: $bg-color;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+    & > .container{
+        @include flex-center;
+        width: 100%;
+    }
+    &-text{
+        @include flex-center;
+        padding: 10px 0;
+        text-align: center;
+        &__heading{
+            margin-bottom: 0;
+        }
+        &__btn{
+            padding: 25px 0;
+            
+        }
+    }
+}
+
+.search{
+    width: 100%;
+    @include flex-center;
+    &-bar{
+        width: 35%;
+        padding: 15px 15px;
+        background-color: $search-color;
+        border: 1px solid $search-color;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        & > i{
+            width: 8%;
+            padding: 0 5px;
+            text-align: center;
+        }
+        & input{
+            width: 92%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+        &:focus-within{
+            border: 1px solid $primary-color;
+        }
+    }
+}
