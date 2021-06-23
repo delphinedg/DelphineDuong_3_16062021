@@ -1,0 +1,45 @@
+.footer{
+    background-color: #353535 ;
+    color: #fff;
+    & > .container{
+        @include flex-center;
+        padding: 30px 0;
+        @include mobile {
+            align-items: flex-start;
+            padding: 30px 20px;
+        }
+    }
+    &__heading{
+        margin: 0;
+    }
+    
+}
+
+.list{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    @include mobile {
+        text-align: left;
+    }
+    &__link{
+        padding: 5px 0;
+        & > a{
+            text-decoration: none;
+            color:#fff;
+            transition: color 400ms;
+            &:hover{
+                color: $primary-color;
+            }
+
+            & .fa-utensils{
+                font-size: 0.9em;
+                margin-right: 13px;
+            }
+            & .fa-hands-helping{
+                font-size: 0.8em;
+                margin-right: 8px;
+            }
+        }
+    }
+}
