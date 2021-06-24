@@ -57,7 +57,7 @@ input{
     &__tag{
         font-weight: 600;
     }
-    &__text-descrip > p{
+    &__text-descrip p{
         font-weight: 300;
     }
 }
@@ -67,7 +67,16 @@ input{
     font-size: 1.3em;
 }
 
-.list__link a{
-    font-size: 1.1em;
+.list__link {
+    & a{
+        font-size: 1.1em;
+    }
+    &--bold{
+        font-weight: 500;
+    }
+    &--light{
+        font-weight: 300;
+    }
+
 }
 

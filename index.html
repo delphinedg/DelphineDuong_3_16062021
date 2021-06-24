@@ -71,70 +71,72 @@
                 <h2 class="rest__heading">Restaurants</h2>
                 <div class="rest-grid">
                     <div class="rest-card">
-                        <a class="rest-card__link" href="#">
-                            <div class="rest-card__tag">Nouveau</div>
-                            <figure class="rest-card__image">
-                                <img src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            </figure>
-                            <div class="rest-card__text">
-                                <div class="rest-card__text-descrip">
+                        <div class="rest-card__tag">Nouveau</div>
+                        <figure class="rest-card__image">
+                            <img src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                        </figure>
+                        <div class="rest-card__text">
+                            <div class="rest-card__text-descrip">
+                                <a class="rest-card__link" href="#">
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
-                                </div>
-                                <div class="rest-card__text-like">
-                                    <i class="fas fa-heart"></i>
-                                </div>
+                                </a>
                             </div>
-                        </a>
+                            <button class="rest-card__text-like">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="rest-card">
-                        <a class="rest-card__link" href="#">
                             <div class="rest-card__tag">Nouveau</div>
                             <figure class="rest-card__image special-pos">
                                 <img src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" id="special-pos">
                             </figure>
                             <div class="rest-card__text">
                                 <div class="rest-card__text-descrip">
-                                    <h3>La note enchantée</h3>
-                                    <p>Charonne</p>
+                                    <a class="rest-card__link" href="#">
+                                        <h3>La note enchantée</h3>
+                                        <p>Charonne</p>
+                                    </a>
                                 </div>
-                                <div class="rest-card__text-like">
+                                <button class="rest-card__text-like">
                                     <i class="fas fa-heart"></i>
-                                </div>
+                                </button>
                             </div>
-                        </a>
                     </div>
                     <div class="rest-card">
-                        <a class="rest-card__link" href="#">
                             <figure class="rest-card__image">
                                 <img src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
                             </figure>
                             <div class="rest-card__text">
                                 <div class="rest-card__text-descrip">
-                                    <h3>À la française</h3>
-                                    <p>Cité Rouge</p>
+                                    <a class="rest-card__link" href="#">
+                                        <h3>À la française</h3>
+                                        <p>Cité Rouge</p>
+                                    </a>
                                 </div>
-                                <div class="rest-card__text-like">
+                                <button class="rest-card__text-like">
                                     <i class="fas fa-heart"></i>
-                                </div>
+                                </button>
                             </div>
-                        </a>
                     </div>
                     <div class="rest-card">
-                        <a class="rest-card__link" href="#">
+
                             <figure class="rest-card__image">
                                 <img src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
                             </figure>
                             <div class="rest-card__text">
                                 <div class="rest-card__text-descrip">
-                                    <h3>Le délice des sens</h3>
-                                    <p>Folie-Méricourt</p>
+                                    <a class="rest-card__link" href="#">
+                                        <h3>Le délice des sens</h3>
+                                        <p>Folie-Méricourt</p>
+                                    </a>
                                 </div>
-                                <div class="rest-card__text-like">
+                                <button class="rest-card__text-like">
                                     <i class="fas fa-heart"></i>
-                                </div>
+                                </button>
                             </div>
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -143,14 +145,19 @@
         <footer class="footer">
             <div class="container">
                 <p class="footer__heading">ohmyfood</p>
-                <ul class="list">
-                    <li class="list__link"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-                    <li class="list__link"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
-                    <li class="list__link"><a href="#">Mentions légales</a></li>
-                    <li class="list__link"><a href="#">Contact</a></li>
-                </ul>
+                <div class="footer__bloc">
+                    <ul class="list">
+                        <li class="list__link list__link--bold"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                        <li class="list__link list__link--bold"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+                    </ul>
+                    <ul class="list list--bottom">
+                        <li class="list__link list__link--light"><a href="#">Mentions légales</a></li>
+                        <li class="list__link list__link--light"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
+
     </div>
     
 </body>

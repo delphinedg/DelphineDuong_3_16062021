@@ -12,19 +12,48 @@
     &__heading{
         margin: 0;
     }
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+    }
     
 }
 
 .list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
     list-style-type: none;
     text-align: center;
     padding: 0;
+    margin-bottom: 0;
+
+    @include tablet{
+        width: 60%;
+    }
+
     @include mobile {
         text-align: left;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &--bottom{
+        margin-top:0;
     }
     &__link{
         padding: 5px 0;
-        & > a{
+        width: 50%;
+
+        @include mobile{
+            width: 100%;
+        }
+
+        & a{
             text-decoration: none;
             color:#fff;
             transition: color 400ms;
