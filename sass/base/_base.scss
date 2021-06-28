@@ -9,6 +9,11 @@ body{
 
     @include tablet{
         width: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @include mobile{
         padding-left: 20px;
         padding-right: 20px;
     }

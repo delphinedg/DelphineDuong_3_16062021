@@ -8,6 +8,9 @@
 h1{
     font-family: $font-title;
     font-size: 2em;
+    @include mobile{
+        font-size: 1.9em;
+    }
 }
 
 h2{
@@ -32,13 +35,14 @@ input{
         font-size: 1.1em;
         font-weight: 300;
     }
-    & a {
-        font-family: $font-text;
-        font-size: 1.3em;
-        font-weight: 500;
 
-    }
 
+}
+
+.btn {
+    font-family: $font-text;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 .steps{
@@ -50,8 +54,6 @@ input{
         font-weight: 500;
     }
 }
-
-
 
 .rest-card{
     &__tag{
@@ -78,5 +80,25 @@ input{
         font-weight: 300;
     }
 
+}
+
+.course__name{
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.dish__name{
+    &-title{
+        font-size: 1.1em;
+        font-weight: 600;
+        line-height: 1.5em;
+    }
+    &-descrip{
+        font-weight: 300;
+    }
+}
+
+.dish__price{
+    font-weight: 600;
 }
 

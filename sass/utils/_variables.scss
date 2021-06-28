@@ -12,3 +12,7 @@ $font-text: 'Roboto', sans-serif;
 
 $radius-field: 30px;
 $radius-card: 20px;
+
+$num-dish: 10;
+$anim-dur: 2500ms;
+$anim-delay: $anim-dur / $num-dish;

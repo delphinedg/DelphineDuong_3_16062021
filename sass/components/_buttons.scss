@@ -1,18 +1,19 @@
 .btn{
     padding: 15px 25px;
-    cursor: pointer;
+    //cursor: pointer;
+    text-decoration: none;
+    color:#fff;
     border-radius: 30px;
     border: none;
     background: linear-gradient(175deg, $secondary-color, 65%, $primary-color);
     @include shadow;
     transition: background 500ms, box-shadow 800ms;
-    & > a {
-        text-decoration: none;
-        color:#fff;
-    }
     &:hover{
         background: linear-gradient(175deg, lighten($secondary-color, 5), 70%, lighten($primary-color,5));
         box-shadow: 1px 5px 4px darken($shadow-color,5);
+    }
+    &--order{
+        padding: 15px 60px;
     }
 
 }
