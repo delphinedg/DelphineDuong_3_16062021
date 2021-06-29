@@ -132,6 +132,68 @@ input {
   padding: 15px 60px;
 }
 
+.spin-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  animation: loader 0.1s both;
+  animation-delay: 3s;
+}
+.spin-wrapper .spinner {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  top: 50%;
+  left: 50%;
+  margin: -30px;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+.spin-wrapper .spinner::before, .spin-wrapper .spinner::after {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+.spin-wrapper .spinner::before {
+  border-top-color: #FF79DA;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  animation: spin 3s linear infinite;
+}
+.spin-wrapper .spinner::after {
+  border-top-color: #99E2D0;
+  top: 6px;
+  right: 6px;
+  bottom: 6px;
+  left: 6px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 .header {
   border-bottom: 1px solid #dbdada;
   box-shadow: 1px 2px 4px #dbdada;
