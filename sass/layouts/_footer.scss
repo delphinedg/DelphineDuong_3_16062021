@@ -51,8 +51,11 @@
 
         @include mobile{
             width: 100%;
+            &--light:last-child{
+                padding-bottom: 0;
+            }
         }
-
+        
         & a{
             text-decoration: none;
             color:#fff;

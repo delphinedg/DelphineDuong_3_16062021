@@ -14,22 +14,33 @@
             <a class="header__arrow" href="./index.html">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <h1 class="header__logo">
+            <p class="header__logo">
                 ohmyfood
-            </h1>
+            </p>
         </header>
 
-        <section class="banner">
+        <div class="banner">
             <img src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"/>
-        </section>
+        </div>
 
         <section class="menu">
             <div class="container">
                 <div class="menu__heading">
                     <h1>La palette du goût</h1>
-                    <button class="rest-card__text-like">
-                        <i class="fas fa-heart"></i>
-                    </button>
+                    <div class="menu__icon heart">
+                        <svg viewBox="0 0 100 100" class="heart-main">
+                            <path d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+                        </svg>
+                        <svg viewBox="0 0 100 100" class="heart-bg">
+                            <defs>
+                                <linearGradient id="grad1" x1="100%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" id="deg1" />
+                                    <stop offset="100%" id="deg2" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+                        </svg>
+                    </div>
                 </div>
 
                 <div class="menu-grid">
@@ -191,7 +202,7 @@
                     </ul>
                     <ul class="list list--bottom">
                         <li class="list__link list__link--light"><a href="#">Mentions légales</a></li>
-                        <li class="list__link list__link--light"><a href="#">Contact</a></li>
+                        <li class="list__link list__link--light"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
                     </ul>
                 </div>
             </div>

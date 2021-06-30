@@ -1,0 +1,60 @@
+.heart{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    & svg{
+        overflow: visible;
+        width: 25px;
+    }
+
+    &-main {
+        fill: transparent;
+        stroke: #000;
+        stroke-width: 3px;
+    }
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: url(#grad1);
+        stroke: url(#grad1);
+        stroke-width: 3px;
+        opacity: 0;
+    }
+
+    &:hover .heart-bg {
+        animation: animate-heart 1s ease-in-out both;
+    }
+
+}
+
+#deg1{
+    stop-color: $primary-color;
+    stop-opacity: 1;
+}
+
+#deg2{
+    stop-color: $secondary-color;
+    stop-opacity: 1;
+}
+
+@keyframes animate-heart {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    80%{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

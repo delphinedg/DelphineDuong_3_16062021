@@ -39,24 +39,35 @@
     &__heading{
         display: flex;
         width: 100%;
+        justify-content: center;
+        align-items: center;
+        @include mobile{
+            justify-content: space-between;
+        }
         & h1{
-            margin: 10px 0;
-            width: 80%;
+            margin: 10px 25px 10px 0;
+            @include mobile{
+                margin: 10px 0;
+            }
         }
-        & button{
-            width: 20%;
-        }
+
     }
-    &-grid{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-bottom: 30px;
+    &__icon{
+        @include mobile{
+            padding-right: 15px;
+        }
     }
     &__btn{
         text-align: center;
     }
 
+}
+
+.menu-grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 30px;
 }
 
 .course{
@@ -94,9 +105,9 @@
     cursor: pointer;
     overflow: hidden;
     position:relative;
-    transition: all 0.2s linear 0;
+    transition: all 0.2s linear;
     opacity: 0;
-    animation: fade-in $anim-dur both;
+    animation: fade-in $anim-dur ease-in both;
 
     @for $i from 1 through $num-dish{
         &--#{$i} {
@@ -130,7 +141,7 @@
         }
 
         @include mobile{
-            width: 16%;
+            width: 18%;
         }
     }
 
@@ -152,8 +163,13 @@
 
     &__name{
         flex: 11;
+        min-width: 0;
         & > p{
             margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: width 0.4s linear 0s;
         }
     }
 
@@ -163,7 +179,6 @@
         }
         & .dish__price{
             flex: 3;
-            
             @include tablet{
                 flex: 4;
             }
@@ -171,14 +186,8 @@
         & .dish__checked{
             right: 5%;
             transform: rotate(1turn);
-        }
-        & .dish__name{
-            min-width: 0;
-            & > p{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                transition: width 0.4s linear 0s;
+            @include mobile{
+                right: 6%;
             }
         }
     } 
@@ -195,11 +204,10 @@
 @keyframes fade-in {
     0%{
         opacity: 0;
-    }
-    50%{
-        opacity: .5;
+        transform: translateY(10px);
     }
     100%{
         opacity: 1;
+        transform: translateY(0px);
     }
 }
