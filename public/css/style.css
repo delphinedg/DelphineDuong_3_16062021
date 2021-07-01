@@ -809,11 +809,6 @@ input {
 }
 @media screen and (max-width: 992px) {
   .dish::after {
-    width: 17%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .dish::after {
     width: 18%;
   }
 }
@@ -821,11 +816,22 @@ input {
   align-self: center;
   font-size: 1em;
   position: absolute;
-  right: -10%;
+  right: -15%;
   z-index: 2;
   color: #99E2D0;
   transform: rotate(0deg);
   transition: transform 0.5s linear 0s, right 0.4s linear 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15%;
+}
+@media screen and (max-width: 992px) {
+  .dish__checked {
+    width: 18%;
+    right: -18%;
+  }
 }
 .dish__price {
   flex: 1;
@@ -854,13 +860,8 @@ input {
   }
 }
 .dish:hover .dish__checked {
-  right: 5%;
+  right: 0%;
   transform: rotate(1turn);
-}
-@media screen and (max-width: 767px) {
-  .dish:hover .dish__checked {
-    right: 6%;
-  }
 }
 
 .circle {

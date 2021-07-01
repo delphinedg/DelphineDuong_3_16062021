@@ -130,18 +130,14 @@
         right: 0;
         transform: scale(0,1);
         transform-origin: right;
-        width: 15%;
+        width: $width-checked-desk;
         height: 100%;
         background: $tertiary-color;
         transition: all 0.4s linear 0s;
         z-index: 1;
 
         @include tablet{
-            width: 17%;
-        }
-
-        @include mobile{
-            width: 18%;
+            width: $width-checked-tab;
         }
     }
 
@@ -149,11 +145,21 @@
         align-self: center;
         font-size: 1em;
         position: absolute;
-        right: -10%;
+        right: -$width-checked-desk;
         z-index: 2;
         color: $tertiary-color;
         transform: rotate(0deg);
         transition: transform 0.5s linear 0s, right 0.4s linear 0s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: $width-checked-desk;
+
+        @include tablet{
+            width: $width-checked-tab;
+            right: -$width-checked-tab;
+        }
     }
 
     &__price{
@@ -184,11 +190,8 @@
             }
         }
         & .dish__checked{
-            right: 5%;
+            right: 0%;
             transform: rotate(1turn);
-            @include mobile{
-                right: 6%;
-            }
         }
     } 
 }
